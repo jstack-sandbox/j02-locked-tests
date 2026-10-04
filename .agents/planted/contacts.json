@@ -1,0 +1,42 @@
+[
+  {
+    "bug": "save-dropped",
+    "example": "CONTACT-001/E1"
+  },
+  {
+    "bug": "name-not-required",
+    "example": "CONTACT-001/F1"
+  },
+  {
+    "bug": "card-omits-email",
+    "example": "CONTACT-001/E2"
+  },
+  {
+    "bug": "firm-not-stored",
+    "example": "CONTACT-003/E1"
+  },
+  {
+    "bug": "email-validation-accepts-double-at",
+    "example": "CONTACT-004/E1"
+  },
+  {
+    "bug": "duplicate-email-allowed",
+    "example": "CONTACT-004/E2"
+  },
+  {
+    "bug": "phone-required",
+    "example": "CONTACT-005/E1"
+  },
+  {
+    "bug": "import-drops-second-row",
+    "example": "CONTACT-006/E1"
+  },
+  {
+    "bug": "list-unsorted",
+    "example": "CONTACT-007/E1"
+  },
+  {
+    "bug": "export-drops-email",
+    "example": "CONTACT-008/E1"
+  }
+]

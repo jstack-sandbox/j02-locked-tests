@@ -1,0 +1,10 @@
+/tests/
+
+# jstack: machinery
+/.github/ @fund-flow-admin
+/.agents/settings.json @fund-flow-admin
+/.agents/planted/ @fund-flow-admin
+/.mergify.yml @fund-flow-admin
+/CODEOWNERS @fund-flow-admin
+/tests/runner-a.json @fund-flow-admin
+/tests/journeys/browser-a.json @fund-flow-admin
