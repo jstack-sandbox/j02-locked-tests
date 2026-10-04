@@ -1,7 +1,6 @@
 /tests/
 
 # jstack: machinery
-/.github/ @fund-flow-admin
 /.agents/settings.json @fund-flow-admin
 /.agents/planted/ @fund-flow-admin
 /.mergify.yml @fund-flow-admin
