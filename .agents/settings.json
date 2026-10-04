@@ -1,4 +1,4 @@
-{"jstack": {"version": "1.4.0", "checksum": "sha256:f066c077bfa37036ed254adc1d51af450e39260a1e522b816c1beee6c2b4fcd2"}, "owners": {"owner": "fund-flow-admin"},
+{"jstack": {"version": "1.4.0", "checksum": "sha256:3ddf472e69f81bac32c0d965c2d76e41bde66002d3891e8da2a975153dc9aef9"}, "owners": {"owner": "fund-flow-admin"},
  "machinery_owners": ["fund-flow-admin"],
  "areas": {"contacts": {"risky": true}},
  "profiles": {"lang-a": {}, "runner-a": {}, "browser-a": {}}, "vocabulary": {"organization": "firm"},
