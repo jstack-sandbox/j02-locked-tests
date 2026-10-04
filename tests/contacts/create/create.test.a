@@ -1,0 +1,20 @@
+test("CONTACT-001/E1 saves a contact") {
+  expect(save_contact(name: "Dana Ruiz").name).to_equal("Dana Ruiz")
+}
+
+test("CONTACT-001/F1 refuses an empty name") {
+  expect(save_contact(name: "")).refused()
+}
+
+test("CONTACT-001/E2 contact card shows name and email") {
+  expect(contact_card(dana())).to_match("tests/snapshots/contact_card.golden")
+}
+
+test("CONTACT-004/E1 refuses a malformed email") {
+  expect(refused_lines("tests/fixtures/bad_emails.txt")).to_equal(lines("tests/fixtures/bad_emails.txt"))
+}
+
+test("CONTACT-004/E2 refuses a duplicate email") {
+  save_contact(name: "Dana Ruiz", email: "dana@example.com")
+  expect(save_contact(name: "Dana Ortiz", email: "dana@example.com")).refused()
+}

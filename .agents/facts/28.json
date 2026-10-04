@@ -1,0 +1,11 @@
+{
+  "issue": 28,
+  "rules": [
+    "CONTACT-001",
+    "CONTACT-002",
+    "CONTACT-003",
+    "CONTACT-004",
+    "CONTACT-005"
+  ],
+  "open_questions": []
+}
