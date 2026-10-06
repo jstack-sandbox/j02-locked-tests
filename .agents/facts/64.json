@@ -1,0 +1,14 @@
+{
+  "issue": 64,
+  "rules": [
+    "CONTACT-001",
+    "CONTACT-002",
+    "CONTACT-003",
+    "CONTACT-004",
+    "CONTACT-005",
+    "CONTACT-006",
+    "CONTACT-007",
+    "CONTACT-008"
+  ],
+  "open_questions": []
+}
