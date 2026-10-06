@@ -1,4 +1,4 @@
-{"jstack": {"version": "1.4.0", "checksum": "sha256:bb818c0df8df29eb64ce735264f7d61a3319ffc13a9ddccfc3a76f8ac8bf31e1"}, "owners": {"owner": "jstack-sandbox-owner"},
+{"jstack": {"version": "1.4.0", "checksum": "sha256:3ddf472e69f81bac32c0d965c2d76e41bde66002d3891e8da2a975153dc9aef9"}, "owners": {"owner": "jstack-sandbox-owner"},
  "machinery_owners": ["jstack-sandbox-owner"],
  "areas": {"contacts": {"risky": true}},
  "profiles": {"lang-a": {}, "runner-a": {}, "browser-a": {}}, "vocabulary": {"organization": "workspace"},
