@@ -1,0 +1,6 @@
+test("CONTACT-005/E1 phone number is optional") {
+  open("/contacts/new")
+  fill("Name", "Dana Ruiz")
+  click("Save")
+  expect(text("Dana Ruiz")).visible()
+}
