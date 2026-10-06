@@ -1,10 +1,10 @@
 /tests/
 
 # jstack: machinery
-/.github/ @fund-flow-admin
-/.agents/settings.json @fund-flow-admin
-/.agents/planted/ @fund-flow-admin
-/.mergify.yml @fund-flow-admin
-/CODEOWNERS @fund-flow-admin
-/tests/runner-a.json @fund-flow-admin
-/tests/journeys/browser-a.json @fund-flow-admin
+/.github/ @jstack-sandbox-owner
+/.agents/settings.json @jstack-sandbox-owner
+/.agents/planted/ @jstack-sandbox-owner
+/.mergify.yml @jstack-sandbox-owner
+/CODEOWNERS @jstack-sandbox-owner
+/tests/runner-a.json @jstack-sandbox-owner
+/tests/journeys/browser-a.json @jstack-sandbox-owner
