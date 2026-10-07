@@ -1,0 +1,87 @@
+{
+  "feature": 124,
+  "rules_digest": "sha256:a6c3ed585ef443089cd3ca3928e91391be84205537aeb76fb2782699c091363e",
+  "compared_with": [],
+  "shapes": [
+    "Contact{id, workspace_id, name, email, phone optional}"
+  ],
+  "tests": [
+    {
+      "name": "saves a contact",
+      "proves": "CONTACT-001/E1",
+      "kind": "unit"
+    },
+    {
+      "name": "refuses an empty name",
+      "proves": "CONTACT-001/F1",
+      "kind": "unit"
+    },
+    {
+      "name": "contact card shows name and email",
+      "proves": "CONTACT-001/E2",
+      "kind": "unit"
+    },
+    {
+      "name": "workspace B never sees a workspace A contact",
+      "proves": "CONTACT-002/F2",
+      "kind": "integration"
+    },
+    {
+      "name": "stores the contact's workspace",
+      "proves": "CONTACT-003/E1",
+      "kind": "integration"
+    },
+    {
+      "name": "refuses a malformed email",
+      "proves": "CONTACT-004/E1",
+      "kind": "unit"
+    },
+    {
+      "name": "refuses a duplicate email",
+      "proves": "CONTACT-004/E2",
+      "kind": "unit"
+    },
+    {
+      "name": "phone number is optional",
+      "proves": "CONTACT-005/E1",
+      "kind": "journey"
+    },
+    {
+      "name": "imports two contacts from CSV",
+      "proves": "CONTACT-006/E1",
+      "kind": "unit"
+    },
+    {
+      "name": "lists contacts by name",
+      "proves": "CONTACT-007/E1",
+      "kind": "integration"
+    },
+    {
+      "name": "exports contacts as CSV",
+      "proves": "CONTACT-008/E1",
+      "kind": "unit"
+    }
+  ],
+  "journeys": [
+    {
+      "name": "create_contact",
+      "proves": [
+        "CONTACT-005/E1"
+      ]
+    },
+    {
+      "name": "workspace_switch",
+      "proves": [
+        "CONTACT-003/E2"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "S1",
+      "area": "contacts",
+      "text": "an operator in workspace B never sees a workspace A contact, even by guessing its address"
+    }
+  ],
+  "conflicts": []
+}
