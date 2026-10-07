@@ -1,0 +1,9 @@
+test("CONTACT-002/F2 workspace B never sees a workspace A contact") {
+  contact = as_operator("workspace A").save_contact(name: "Dana Ruiz")
+  expect(as_operator("workspace B").get(contact.address).status).to_equal("not found")
+}
+
+test("CONTACT-003/E1 stores the contact's workspace") {
+  contact = as_operator("workspace A").save_contact(name: "Dana Ruiz")
+  expect(contact.workspace).to_equal("workspace A")
+}
