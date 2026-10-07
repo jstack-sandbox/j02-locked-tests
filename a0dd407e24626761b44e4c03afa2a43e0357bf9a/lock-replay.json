@@ -1,0 +1,87 @@
+{
+  "commit": "a0dd407e24626761b44e4c03afa2a43e0357bf9a",
+  "ran": [
+    "CONTACT-001/E1 saves a contact",
+    "CONTACT-001/F1 refuses an empty name",
+    "CONTACT-001/E2 contact card shows name and email",
+    "CONTACT-002/F2 workspace B never sees a workspace A contact",
+    "CONTACT-003/E1 stores the contact's workspace",
+    "CONTACT-004/E1 refuses a malformed email",
+    "CONTACT-004/E2 refuses a duplicate email",
+    "CONTACT-005/E1 phone number is optional"
+  ],
+  "tests": [
+    {
+      "name": "CONTACT-001/E1 saves a contact",
+      "bugs": [
+        {
+          "bug": "save-dropped",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "CONTACT-001/F1 refuses an empty name",
+      "bugs": [
+        {
+          "bug": "name-not-required",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "CONTACT-001/E2 contact card shows name and email",
+      "bugs": [
+        {
+          "bug": "card-omits-email",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "CONTACT-002/F2 workspace B never sees a workspace A contact",
+      "bugs": [
+        {
+          "bug": "workspace-filter-removed",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "CONTACT-003/E1 stores the contact's workspace",
+      "bugs": [
+        {
+          "bug": "workspace-not-stored",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "CONTACT-004/E1 refuses a malformed email",
+      "bugs": [
+        {
+          "bug": "email-validation-accepts-double-at",
+          "result": "survived"
+        }
+      ]
+    },
+    {
+      "name": "CONTACT-004/E2 refuses a duplicate email",
+      "bugs": [
+        {
+          "bug": "duplicate-email-allowed",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "CONTACT-005/E1 phone number is optional",
+      "bugs": [
+        {
+          "bug": "phone-required",
+          "result": "caught"
+        }
+      ]
+    }
+  ]
+}
