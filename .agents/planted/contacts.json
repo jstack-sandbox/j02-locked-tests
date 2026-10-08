@@ -1,42 +1,42 @@
 [
   {
     "bug": "save-dropped",
-    "example": "CONTACT-001/E1"
+    "test": "an operator saves a contact named Dana Ruiz"
   },
   {
     "bug": "name-not-required",
-    "example": "CONTACT-001/F1"
+    "test": "a contact with an empty name is refused"
   },
   {
     "bug": "card-omits-email",
-    "example": "CONTACT-001/E2"
+    "test": "the contact card shows the name and email"
   },
   {
     "bug": "workspace-not-stored",
-    "example": "CONTACT-003/E1"
+    "test": "a saved contact stores the operator's workspace"
   },
   {
     "bug": "email-validation-accepts-double-at",
-    "example": "CONTACT-004/E1"
+    "test": "an email such as a@@b.com is refused"
   },
   {
     "bug": "duplicate-email-allowed",
-    "example": "CONTACT-004/E2"
+    "test": "a second contact with the same email is refused"
   },
   {
     "bug": "phone-required",
-    "example": "CONTACT-005/E1"
+    "test": "a contact saved with no phone is kept"
   },
   {
     "bug": "import-drops-second-row",
-    "example": "CONTACT-006/E1"
+    "test": "a CSV of two contacts imports both"
   },
   {
     "bug": "list-unsorted",
-    "example": "CONTACT-007/E1"
+    "test": "contacts list by name"
   },
   {
     "bug": "export-drops-email",
-    "example": "CONTACT-008/E1"
+    "test": "the export holds every contact's name and email"
   }
 ]

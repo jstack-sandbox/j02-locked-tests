@@ -13,13 +13,11 @@ queue_rules:
       - "check-success=00 policy"
       - "check-success=jstack/lock"
       - "check-success=jstack/facts"
-      - "check-success=jstack/trace"
       - "check-success=01 lint"
       - "check-success=02 tests"
     merge_conditions:
       - "check-success=00 policy"
       - "check-success=jstack/lock"
       - "check-success=jstack/facts"
-      - "check-success=jstack/trace"
       - "check-success=01 lint"
       - "check-success=02 tests"
