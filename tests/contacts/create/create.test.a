@@ -1,0 +1,20 @@
+test("an operator saves a contact named Dana Ruiz") {
+  expect(save_contact(name: "Dana Ruiz").name).to_equal("Dana Ruiz")
+}
+
+test("a contact with an empty name is refused") {
+  expect(save_contact(name: "")).refused()
+}
+
+test("the contact card shows the name and email") {
+  expect(contact_card(dana())).to_match("tests/snapshots/contact_card.golden")
+}
+
+test("an email such as a@@b.com is refused") {
+  expect(refused_lines("tests/fixtures/bad_emails.txt")).to_equal(lines("tests/fixtures/bad_emails.txt"))
+}
+
+test("a second contact with the same email is refused") {
+  save_contact(name: "Dana Ruiz", email: "dana@example.com")
+  expect(save_contact(name: "Dana Ortiz", email: "dana@example.com")).refused()
+}
