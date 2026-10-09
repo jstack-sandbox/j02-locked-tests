@@ -1,0 +1,84 @@
+{
+  "feature": 144,
+  "checklist_digest": "sha256:0ad988db84a3fd7532b159e990a9fc3cb074a69f55da845cd1e9433a3659f8ec",
+  "compared_with": [],
+  "shapes": [
+    "Contact{id, workspace_id, name, email, phone optional}"
+  ],
+  "tests": [
+    {
+      "name": "an operator saves a contact named Dana Ruiz",
+      "covers": "an operator saves a contact named Dana Ruiz, and its card shows the name and email",
+      "kind": "unit"
+    },
+    {
+      "name": "the contact card shows the name and email",
+      "covers": "an operator saves a contact named Dana Ruiz, and its card shows the name and email",
+      "kind": "unit"
+    },
+    {
+      "name": "a contact with an empty name is refused",
+      "covers": "a contact with an empty name is refused",
+      "kind": "unit"
+    },
+    {
+      "name": "workspace B never sees a workspace A contact",
+      "covers": "an operator in workspace B never sees a workspace A contact, in the list or by its address",
+      "kind": "integration"
+    },
+    {
+      "name": "a saved contact stores the operator's workspace",
+      "covers": "a saved contact carries the operator's workspace",
+      "kind": "integration"
+    },
+    {
+      "name": "an email such as a@@b.com is refused",
+      "covers": "an email such as a@@b.com is refused",
+      "kind": "unit"
+    },
+    {
+      "name": "a second contact with the same email is refused",
+      "covers": "a second contact with Dana@Example.com in one workspace is refused",
+      "kind": "unit"
+    },
+    {
+      "name": "a contact saved with no phone is kept",
+      "covers": "a contact saved with no phone is kept",
+      "kind": "journey"
+    },
+    {
+      "name": "a CSV of two contacts imports both",
+      "covers": "a CSV of two contacts imports both",
+      "kind": "unit"
+    },
+    {
+      "name": "the export holds every contact's name and email",
+      "covers": "the export holds every contact's name and email",
+      "kind": "unit"
+    },
+    {
+      "name": "contacts list by name",
+      "covers": "contacts list by name, Ana Ortiz before Ben Lee",
+      "kind": "integration"
+    }
+  ],
+  "journeys": [
+    {
+      "name": "create_contact",
+      "covers": "a contact saved with no phone is kept",
+      "steps": [
+        "an operator opens a new contact",
+        "fills the name Dana Ruiz and no phone",
+        "saves, and Dana Ruiz is shown"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "S1",
+      "area": "contacts",
+      "text": "an operator in workspace B never sees a workspace A contact, even by guessing its address"
+    }
+  ],
+  "conflicts": []
+}
