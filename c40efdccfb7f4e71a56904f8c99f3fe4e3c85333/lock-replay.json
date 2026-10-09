@@ -1,0 +1,87 @@
+{
+  "commit": "c40efdccfb7f4e71a56904f8c99f3fe4e3c85333",
+  "ran": [
+    "an operator saves a contact named Dana Ruiz",
+    "a contact with an empty name is refused",
+    "the contact card shows the name and email",
+    "workspace B never sees a workspace A contact",
+    "a saved contact stores the operator's workspace",
+    "an email such as a@@b.com is refused",
+    "a second contact with the same email is refused",
+    "a contact saved with no phone is kept"
+  ],
+  "tests": [
+    {
+      "name": "an operator saves a contact named Dana Ruiz",
+      "bugs": [
+        {
+          "bug": "save-dropped",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "a contact with an empty name is refused",
+      "bugs": [
+        {
+          "bug": "name-not-required",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "the contact card shows the name and email",
+      "bugs": [
+        {
+          "bug": "card-omits-email",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "workspace B never sees a workspace A contact",
+      "bugs": [
+        {
+          "bug": "workspace-filter-removed",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "a saved contact stores the operator's workspace",
+      "bugs": [
+        {
+          "bug": "workspace-not-stored",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "an email such as a@@b.com is refused",
+      "bugs": [
+        {
+          "bug": "email-validation-accepts-double-at",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "a second contact with the same email is refused",
+      "bugs": [
+        {
+          "bug": "duplicate-email-allowed",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "a contact saved with no phone is kept",
+      "bugs": [
+        {
+          "bug": "phone-required",
+          "result": "caught"
+        }
+      ]
+    }
+  ]
+}
