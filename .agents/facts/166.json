@@ -1,0 +1,47 @@
+{
+  "issue": 166,
+  "tests": [
+    {
+      "name": "an operator saves a contact named Dana Ruiz",
+      "covers": "an operator saves a contact named Dana Ruiz, and its card shows the name and email",
+      "kind": "unit"
+    },
+    {
+      "name": "the contact card shows the name and email",
+      "covers": "an operator saves a contact named Dana Ruiz, and its card shows the name and email",
+      "kind": "unit"
+    },
+    {
+      "name": "a contact with an empty name is refused",
+      "covers": "a contact with an empty name is refused",
+      "kind": "unit"
+    },
+    {
+      "name": "workspace B never sees a workspace A contact",
+      "covers": "an operator in workspace B never sees a workspace A contact, in the list or by its address",
+      "kind": "integration"
+    },
+    {
+      "name": "a saved contact stores the operator's workspace",
+      "covers": "a saved contact carries the operator's workspace",
+      "kind": "integration"
+    },
+    {
+      "name": "an email such as a@@b.com is refused",
+      "covers": "an email such as a@@b.com is refused",
+      "kind": "unit"
+    },
+    {
+      "name": "a second contact with the same email is refused",
+      "covers": "a second contact with Dana@Example.com in one workspace is refused",
+      "kind": "unit"
+    },
+    {
+      "name": "a contact saved with no phone is kept",
+      "covers": "a contact saved with no phone is kept",
+      "kind": "journey",
+      "journey": "create_contact"
+    }
+  ],
+  "open_questions": []
+}
