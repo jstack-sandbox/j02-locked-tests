@@ -6,7 +6,9 @@ group("an operator saves a contact named Dana Ruiz, and its card shows the name 
   test("the contact card shows the name and email") {
     expect(contact_card(dana())).to_match("tests/snapshots/contact_card.golden")
   }
+}
 
+group("a contact with an empty name is refused") {
   test("a contact with an empty name is refused") {
     expect(save_contact(name: "")).refused()
   }
