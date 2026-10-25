@@ -21,7 +21,7 @@
   },
   {
     "bug": "duplicate-email-allowed",
-    "test": "a second contact with the same email is refused"
+    "test": "a second contact with the same email as %s is refused"
   },
   {
     "bug": "phone-required",
