@@ -1,0 +1,5 @@
+{
+  "tests/journeys/browser-a.listing.json": "{\n  \"projects\": [\n    \"desktop\"\n  ],\n  \"journeys\": []\n}\n",
+  "tests/journeys/browser-a.report.json": "{\n  \"results\": [],\n  \"errors\": []\n}\n",
+  "tests/runner-a.report.xml": "\u003c?xml version=\"1.0\" encoding=\"UTF-8\" ?\u003e\n\u003ctestsuites\u003e\u003c/testsuites\u003e\n"
+}
