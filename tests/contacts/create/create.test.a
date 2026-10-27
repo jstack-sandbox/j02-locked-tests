@@ -25,7 +25,7 @@ group("a second contact with Dana@Example.com in one workspace is refused") {
     "dana@example.com",
     "Dana@Example.com",
   ])("a second contact with the same email as %s is refused") { email ->
-    save_contact(name: "Dana Ruiz", email: email)
-    expect(save_contact(name: "Dana Ortiz", email: "dana@example.com")).refused()
+    save_contact(name: "Dana Ruiz", email: "dana@example.com")
+    expect(save_contact(name: "Dana Ortiz", email: email)).refused()
   }
 }
