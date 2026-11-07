@@ -1,0 +1,31 @@
+group("an operator saves a contact named Dana Ruiz, and its card shows the name and email") {
+  test("an operator saves a contact named Dana Ruiz") {
+    expect(save_contact(name: "Dana Ruiz").name).to_equal("Dana Ruiz")
+  }
+
+  fx.spec("the contact card shows the name and email") {
+    expect(contact_card(dana())).to_match("tests/snapshots/contact_card.golden")
+  }
+}
+
+group("a contact with an empty name is refused") {
+  test("a contact with an empty name is refused") {
+    expect(save_contact(name: "")).refused()
+  }
+}
+
+group("an email such as a@@b.com is refused") {
+  test("an email such as a@@b.com is refused") {
+    expect(refused_lines("tests/fixtures/bad_emails.txt")).to_equal(lines("tests/fixtures/bad_emails.txt"))
+  }
+}
+
+group("a second contact with Dana@Example.com in one workspace is refused") {
+  table([
+    "dana@example.com",
+    "Dana@Example.com",
+  ])("a second contact with the same email as %s is refused") { email ->
+    save_contact(name: "Dana Ruiz", email: "dana@example.com")
+    expect(save_contact(name: "Dana Ortiz", email: email)).refused()
+  }
+}
