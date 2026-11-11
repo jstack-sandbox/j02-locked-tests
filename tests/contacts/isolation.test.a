@@ -1,0 +1,15 @@
+group("an operator in workspace B never sees a workspace A contact, in the list or by its address") {
+  case("workspace B never sees a workspace A contact") {
+    contact = as_operator("workspace A").save_contact(name: "Dana Ruiz")
+    expect(as_operator("workspace B").get(contact.address).status).to_equal("not found")
+  }
+}
+
+group("a saved contact carries the operator's workspace") {
+  fx.each([
+    "workspace A",
+  ])("a saved contact stores the operator's workspace") { workspace ->
+    contact = as_operator(workspace).save_contact(name: "Dana Ruiz")
+    expect(contact.workspace).to_equal(workspace)
+  }
+}
