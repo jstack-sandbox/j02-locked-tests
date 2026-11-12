@@ -1,2 +1,3 @@
 plainaddress
 a@@b.com
+name@@example.com
