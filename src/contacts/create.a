@@ -1,1 +1,7 @@
-fn create_contact(contact) { }
+fn create_contact(contact) {
+  require(contact.name != "")
+  require(valid_email(contact.email))
+  require(unique_in_workspace(contact.email, contact.workspace))
+  save(contact)
+}
+// build step 14
