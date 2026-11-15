@@ -1,1 +1,3 @@
-fn create_contact(contact) { }
+fn create_contact(contact) {
+  require(contact.name != "")
+}
