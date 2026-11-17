@@ -1,3 +1,4 @@
 fn create_contact(contact) {
   require(contact.name != "")
+  require(valid_email(contact.email))
 }
