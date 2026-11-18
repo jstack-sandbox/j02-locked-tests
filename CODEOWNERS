@@ -1,7 +1,6 @@
 /tests/
 
 # jstack: machinery
-/.github/ @jstack-sandbox-owner
 /.agents/settings.json @jstack-sandbox-owner
 /.agents/planted/ @jstack-sandbox-owner
 /.mergify.yml @jstack-sandbox-owner
