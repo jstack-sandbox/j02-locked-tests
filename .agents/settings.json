@@ -1,7 +1,7 @@
-{"jstack": {"version": "1.4.0", "checksum": "sha256:bb818c0df8df29eb64ce735264f7d61a3319ffc13a9ddccfc3a76f8ac8bf31e1"}, "owners": {"owner": "jstack-sandbox-owner"},
+{"jstack": {"version": "1.4.0", "checksum": "sha256:c2d76899e22ec6d844fc4fafa16b3c9193e19729ddc4107f18ed175a8d3cb0cc"}, "owners": {"owner": "jstack-sandbox-owner"},
  "machinery_owners": ["jstack-sandbox-owner"],
  "areas": {"contacts": {"risky": true}},
- "profiles": {"lang-a": {}, "runner-a": {}, "browser-a": {}}, "vocabulary": {"organization": "workspace"},
+ "profiles": {"lang-a": {}, "runner-a": {}, "fx-a": {}, "browser-a": {}}, "vocabulary": {"organization": "workspace"},
  "required_checks": {
   "00 policy": {"producer": {"app": "jstack"}},
   "jstack/lock": {"producer": {"app": "jstack"}},
